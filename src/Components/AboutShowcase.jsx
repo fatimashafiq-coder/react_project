@@ -1,11 +1,10 @@
-import React from 'react';
-import './About1.css';
-import { FaSearch } from 'react-icons/fa';
+import './AboutShowcase.css';
+import AboutCommunication from './AboutCommunication';
 import image_one from '../assets/image_one.jpg';
 import image_two from '../assets/image_two.png';
 import one from '../assets/one.jpg';
 
-function About1() {
+function AboutShowcase() {
   return (
     <>
       {/* 4th Section - What I Can Offer */}
@@ -14,9 +13,7 @@ function About1() {
           <p>WHAT I CAN OFFER</p>
           <h1>Fresh eyes, designing for the future.</h1>
         </div>
-
         <div className="divider2"></div>
-
         <div className="about-right">
           <p>
             While new to the UX/UI field, I bring a wealth of experience from the education field,
@@ -24,38 +21,16 @@ function About1() {
           </p>
         </div>
       </div>
-
       {/* 5th Section - Skills / Cards */}
-      <div className="skill-box">
-        <div className="skill-card">
-          <div className="icon">
-            <FaSearch className="fas fa-users" />
-          </div>
-          <h2>Communication & <br /> Collaboration</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid delectus quasi facere cumque fuga.
-            Recusandae ducimus voluptates corporis porro consectetur neque iure beatae impedit veniam ratione.
-          </p>
-        </div>
-
-        <div className="skill-card">
-          <div className="icon">
-            <FaSearch className="fas fa-users" />
-          </div>
-          <h2>User Research</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse atque beatae culpa reiciendis sapiente illum
-            minima dolorum dolor reiciendis sapiente illum minima dolorum dolor.
-          </p>
-        </div>
-      </div>
-
+       <div className="skill-box">
+      <AboutCommunication heading="Communication" />
+      <AboutCommunication heading="ReSearch" />
+       </div>
       {/* 6th Section - My Work */}
       <div className="mywork">
         <p>MY WORK</p>
         <h1>The projects I've been <br /> working on.</h1>
       </div>
-
       {/* 7th Section - Work Images */}
       <div className="image-section">
         <div className="image-box left">
@@ -65,7 +40,6 @@ function About1() {
           <img src={image_two} alt="Project Two" />
         </div>
       </div>
-
       {/* 8th Section - Testimonials */}
       <div className="testimonial-section">
         <div className="mywork testimonial">
@@ -77,7 +51,6 @@ function About1() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h2>
         </div>
-
         <div className="testimonial-person">
           <img src={one} alt="Keum Hyun-Ah" className="testimonial-img" />
           <div className="person-info">
@@ -89,5 +62,4 @@ function About1() {
     </>
   );
 }
-
-export default About1;
+export default AboutShowcase;

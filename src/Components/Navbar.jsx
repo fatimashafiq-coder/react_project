@@ -11,6 +11,13 @@ function Navbar() {
     setMenuOpen(!menuOpen);
   };
 
+  const navLinks = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/work', label: 'Works' },
+    { path: '/contact', label: 'Contact' },
+  ];
+
   return (
     <div>
       <nav className="navbar">
@@ -18,13 +25,16 @@ function Navbar() {
           <NavLink to="/">
             <img src={logo} alt="Logo" />
           </NavLink>
-        </div> 
+        </div>
 
         <ul className={`nav-link ${menuOpen ? 'active' : ''}`}>
-          <li><NavLink to="/" className='link'>Home</NavLink></li>
-          <li><NavLink to="/about" className='link'>About</NavLink></li>
-          <li><NavLink to="/work" className='link'>Works</NavLink></li>
-          <li><NavLink to="/contact" className='link'>Contact</NavLink></li>
+          {navLinks.map((link, index) => (
+            <li key={link.path || index}>
+              <NavLink to={link.path} className="link">
+                {link.label}
+              </NavLink>
+            </li>
+          ))}
         </ul>
 
         <div className='search'>
@@ -39,7 +49,7 @@ function Navbar() {
       </nav>
 
       {/* Hero Section */}
-    
+
     </div>
   )
 }
